@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">  
+    
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAcoAAABuCAMAAACQuKOiAAABJlBMVEX///9LSkpGRUVBQEBFRETj4+P6+vrt7e0/Pj48Ozt2dXX09PRLS0vPz8/p6elwb29+fn6/v79TUlJeXl6qqqo1NDTf399WVVXLy8uJiYnU1NS3t7eWlpa5ubna2trGxsZmZWWfn5+SkpJ9fX1qamovLi7sbTbsaTnrYD/tfCumpaX+9vPsbzTsajjsdDHsZDz63s3rW0LqTDHtgCj75Nz0sZjzpYfrZSb1uqLtd0Hue1D50MHrXyHwjmv74NfviVjtc0LrZCvueVP3xrjrbCHrWiTwiGnvjVjxlnfyoHX0rZv1upztezfrWy/ufWDrbhHzrozxjnfzoZD3zLDviELyom750snsZU71uKvwgHHsexXwj3797Or0tYbthSrqUjchHx/ta14fR96YAAAZ50lEQVR4nO1dd7/btrkWhzjEJZGUKFKDEiUnDk+WEzejTdOmdbrSpLdJ07puEt9+/y9xQQLvC4BD4xz72Lk/Pv/YhwKxHuBdGByNBtwzHv/ih1ddhQEvAj989PbHv/3FzauuxoC7wvjk04/feOONL375q1ddkwF3w69++fHbb79R4bNff/6qKzPg9vj8N0/eJniDzMt33vnisz8NKvNnih8+qol8++Nff/Kbj9955503v3jzL4PK/Bni5qtPayY/rrTkzSe//YJw+eYXv/v9q67XgGvxq0+fvPsuIfLJJ3Qi3nz02RdvEnz5h0Fl/qzw/h//9i7BkycfcYn6+E+fVVy+9+XfB5X5s8EPf37ybs3knx9Lzz//hkzM9977+r1BZf48cPPVX2smn/ym5Uoav//d1+8RfD2ozJ8DvvsHk62fdE29m798Scn8ZlCZrzlQSf5Pnwz94U81l0RlPu5JMeA1wOPv33rr3bfaSlLG53//klD58L2H3w4q8zXFzVdvVXj3yR/fP5OyUpkPHz78+l9PjXup2YDrQJRkxeSTv353Pu3N06+/fliR+c0/X37FBlyH9xmRf/vqsol2823N5cMPBpX5euHx989q4fq3P1/u/j/+T03m80ffDiGD1wY3P35YM/nsrJKU8c9vnj98+OjR8389Heyf1wPf/ePZhxWR/7hAScownpJJSfDBvweV+RrgfUIkYfLZs69u8/bNtx8wMgeV+YpBlOSHFZ79eFsZ+fg/NZfPnw8q81Xi5sefaiaffX+dkpRBVGZN5uBl3hnOcrUv0mlalJvMuebF7xiRP12tJBt4+ohK2f9erzK9/51TPIikgbB/AM+PUnrDgueHu9X5Moy1zlq8FGT7ZG5rml5Bs+x5sh9f+GalJH8iRD67K5EjUWVeLWUthcGVKn5Q4Xlkis8zeG7nd630JRiHtDR18rJLyiNNwzZTaHp6GZnvP/vpJ0LkrZWkjB+oynx0NZUHnVXcWoqPXWyQuhWfrzRg3r9rlS/BfVHpFE0eKZnJRk5nOAyyLiMWz7PvX5zh+c9/P3/0/CmvHODMazPgRl8LT805NseaicmnOvTtvSjme6LSmdgdRFaYl1LCVbSjyKTHj5/9dBdrp42nj/7Lp3jKygzME28QjGH+qTvh6QzlrqKnYnKYw5rcxJeFe6Jypyl9mMdiwthWa2ienMGLJZLgRliPnui00PAMlaMdSBYx5Z63TU2ExAsYvfPFi6x4L+6HyrXIZNVpIpeSVIpZStXrzezFY8Lqk5yjElnTheqBHK2rLcjoFczW8H4cn3uhcsGlq26FlShLNHEoCz34elOZATsaFyVmJAxMkeKCUSxL3ZcH/z6oTGHc6krhjSv7ws/2Cg5mbc+TvlIqzwpYpE3oLl+UONoKnzsgjbVZV1YvHvcxK00YtvpE6Csnxblqcwn0elPJB6WFj3LaDLc5A32YwdbZXF8M7mNWbhhnkt1HUGJjuUfyaqk86/9toMo2mjLrml01pR3J7Z4ZtDpqZuKYvu+bZxXoBckMczwe+0w/n6DSMP0q4fkxVSc8USgqjQY9RqC2tMllVHYWdYFxYXSnuXxWmiBJuCSlL1uzqH4+R7sHWi2qD1KDrEyPoesqyaRY9cdHDK9OpigRSdY3wJz4kNhzW92ldTSpj0ojL4JQtea2Hk3LbSOP5Yyi9v0MkqFq23p4KHvKhJ6Kmj0FY1ylMU2D9LRApYEdbzDQBszW6SGVsnK8uEinh2mx2vbyudisSZJDWi7lQECVrTArjR62IfWxOfocqj5th/5iYxwIx6ngIRsrxdZ0+oOqW/NgOeqCE8vJJl3j2tjrFiSxI6+PSqdUbB00vK7ZR4lMY2dbFeZVlHgDGSqqZk874yWsUWrU/NV8oFPY1S9OEIYhBsHC6g/aX2M9pKiEGukM8oIYBJ1NLLsK7Ko6qam6bo67CosinFskjVo1xg4EO2SpNAtVTjr0JQw1aMxWYYKVRvUwHIBGiNDqWGm416q1a1fXKNVWsmPLNfVcycGzym4qN60i7VSgAQRjNTJTKYqju1mzyJEgv1oCZcpQR7bQ5OPZUSoXNDKmqluMGvGsssSSXtOtojmvjNTSxSSqFWE181bsQhaITWTQXjBm8lqy6FPmc+Js9VjG5BcGM+iIk6hqc+T4Xcl0JZZTbdRmPLs0O6gsOvLSjpwHgcpmUjXsmBSwcqDF7d8E9FMJBsRiNGXlIZUrvfmSokfykBm3Q00q9kyuN387TeUIqLTZ1KYMkqbR+B1OQpi+aNKNo1ZRNIHsdi6S7mRaIaZathPZq4Q1jlO57gyX6tx/5lTm82YyNWrrmgLdyq45izhP5XgDpACVpaW0oSei0u7uG5uZLVdTCSIGIuq0L7R8NKa1tFjZoFRV9rfZQxGpihSbD7tWHepkQr2crma7TE9wKmcteljdMQVanruwnaxj6mEES9HWJ8jspXILYyvjSm3cyFl+b8fVQV8XsjXEq6mE1RE1oGOWvq+OR0y+sTCk48rJRhNeUKWvbWGhaC7o7l0jmSB05tz4ScVYoa5psv4AohZCj1hSkTCQOZWsRMsWdZHeav1YWDrQtCDOum1+J5qTqmOPkrLnB4nKcILlUioXQvSvahD+rHGhFejdSVgWOSnTxodVg+enqVzAcKJTf0yrEGKvsNkKy84wMFCeELU3jT1vuRcqxk37GLtKD6crkmwtJMMBuhU6VJkUcZxGgg5BKjE4rCrrfOEvS54KRKxIpUoqluebNMQS7Za2NCYi9aqmJ0HZQaeReV4GwlglzfW8rUSlkAflAetBPKF1vBcahC4sOOqEyGNRlsUEyaT2iElKyUAYujPy1/LMajjIDqsWMNRsUqs9GLTqrCNh2dlmFeF9P2HGqLFUoCoaiFgHO0qfsmoYOSazwEIq+ICf0tzMsk3lFh/sWJEmmBqKFbeo1GFdcYGjp0PC5k0uiN8SHvZeh+uCfqUgiSUqiaFOPIakamgGqgC6xymRp4BVFTpeDXMq6ZYJpkHOYKi5l4TYYJWHtpPWt56KrOp0isGM0GmpqAkEeUG8B6gKFFxiVwtGzhh7O6EdZibwwOJq1sNOAiqLpt9EkMKzHesfpFJIZSK7ohZnOHSZ4ZqtTVbNzuuK9ghUqvYkX5iO41c9BBpDPaKptcE1QmptINs28gYOn6AUkcpLNm7A6gjtMUpZrXhZZ9JNIUwMM22PkQU5dpnh8Ke6y8FovbTTCvU508NLaCQMWKnnkErkW5gVvAQq8DiVc6HtZcuR4jCO3faJqlkT2RA6TaUeCalx8GjCeFhDuIzKBmBbE/ad4PgN4clVVOLqSBVuNdgEqaSCY/P+hk0ijKMxujBy3AYHI+UEndaGqQ97ihhJa5SvYjIDNSNNtW3YZxSw4soq1hU7JT2Eo7Uj9OUUeo8truup2IEnqVQlLwPEti56XNCHam0xgVEsh7Sh+nOYqVdRyc3HBdDHhFPCqwObRLSGpe3KWeGosus/eShJToYKSq3/PHbOXdSgDW0tb0cBx45NOKRSEzcFwsjr2ZS0nfSRqUWCodRFJQ5WW9rTBYNTjtKDcgyr3gU1I7GNjUTv/ToqgZeq9bRqdNwwYVvzAIOfTXxcUCjkrAzcXlkre5h9TX8IVwnpyABV2Ui2hK6T564sCECMsCUcpNIVI4PmaSpJs1N9rrWDM5WY5V14kkpVyq977R9Gdi37QatY0kbUBXTsupHTZVRCQ6uepNVlfcrqrhpos0MJUIDVWIU25B/QOO5bQtKq8DvEWhVbFsONpWd0G5JIBPhSmpyztL7nnKOyKo14QJLby17hIaJTVMpaGCMK4WEqAKRPvUSBEmsiJjmwYlE/XEcl2DCVgqPTjS2HsGiavoVwgcI2mzkoEptLHKmo2vnWkqY/NxVVPu77U2S3CUwaRiUPuKgCsM+pgYFUSvPhEiqrl83ZehLa8q5YGx2YU1TKUt9Hk1zVBaAsqvQ6OmCdSXgk5ioqUXrqMKuYVPFpNtoMtTvrIB7HanKEVkg1r82IpWqtOxQi4xjESRrV3UlURh3yT4BWS9Q7UVln4HvrnSuwya2sk1RKHiunsruqFe9pj3pmZUD45EoqwcCbm9TDQ5eMzkVCC9PG4Bb0UwnNrSUx+otuc0lrL5ownMqGJ3eUqDyeoZIuNt+Vyhrj2ZFHe9Fd76LS66QSx3A36s5Zn6QS638llXB2xMqpqYeCmpotRPCyIQQxFaRSbYagY3FWOr0Cdi/OyrEcOuSYSFQGnQIWQc9KvBgqCTwe3wV74BoqTw67elFo3xGa4FDdW1LJ0msxXazEerHKh6BNNQi+offW1JXoBlfTzYAW6U0qJQELirhxCIkv8TfMnqgTiSfV7K5Uci5RDV5OZXshRUJt95cnqVRuSyWLjetrOlvQ3M/oczujklI9QiwMVmybFuxoCqZp7bGDTLQa+0TQ0K33YaI/YTXksGz2AP22b3aC7sG5jsrFiqFjVbq5+ncFlXwQVrvJ2qjqBpuH3GVnkvHtzB5YHVEPtApzaDBzB/S9MJpqpH1+JfoVtbfU51c6GGusBTRMXks+OtXYEALD2D61PHAllZsHFt0K1GhHBUlXiA8uoJI1XA1GvUCD6fSpjWupBFuR9h2PzYBgDUV+KvB1VTkfjGPRjXp90R4MCll11+LAkE/gzuQQAfxprUb9uJJKjOh19DlS2VA3l1AJivDE8YAxdMGmN0mFq6mUzsAI4UvZYtawI3gMVrZ7MNZGYy/IbENZYqh2V/+Jm3HlzZ7QCkblGIzjU+ccrqQS181ahhn3fXHPYReVy24qMQbbvQOxrhObPvrpE+RXU4nxp7pafNjHIsXCHhu+51KKcvBFmlKqbqP7txihoR2A3oguOto8JsbKxS0eYqt80HZUa19JJdrYfEsJZowHFk85Iz1U+pCtxFPmZTXoYiiMZ4kkH5KA2L2aSlP0aQWzdCFRLFQX7S9beOjgGi+clsbZbgv2EfdRmMnKV6YsvyMVUAmZScMnnTNtt5azutCCRbGjNZYy+cIw2npXUIl2nSi1zAc2BdU+sIlAGubHOU3yABT01VRKklRYsDbFzU6aIIQcdKHtPRpJuI8HxzhufieUQ7It7tTDRuC2Eb5UxDPjuwiQcG6kcJOeDuNrqeTiyIrEuHbuIsdosmH44zyVfJ1ZQy59GJts1Bgw7YVtbSme+4Dxg1rm4oM6wv4w0UaRt76IL3APV0/22dhfbA4KT4ukcyWsR3Wy1USIm4LocjAKqyarsen427WwUQ8FO16doO/y6mCJuTg0R8W1VAobSFR9t59l2+12uUojHlbnfYiz8kiqaNLHfVQavPbF1jQMw1/hbg/bb3ShflxWSUwPpRr3DNAlKnxS6CWX0PjCiVFxwgvhJVnfOUJAQ7PCRBV2tlnc93A4JaqmVcn4a4JsFvaMakp0TPROHZ3xiaolx8Nkx5cZ3Wbw4tIQgWglqJpVSzdxuUuoJA53VYl2Ee3svIdKfgWHouu7IDgm/G/oR0NqThBEQuQXxSne1qKHpF9Ob7xm2fL4hGQdC7NVXlgjxl9fREMTO8xr7jrnyUSTwBVSwRtNXUnGsdjv4rIIdvj10Z6y71IJ2oGCl5JLrKfSs/YGMGHXqFRVYc+RuFVWSiP4W4WYjXV68yT0Eh81ol2+4GHl5vJG1rVUW7VK3guw7ElmSTbjth3G0g8sKC1YzofufTg2yqNbBO66d7yztuyEF0yxcP0clX73fmVVjE4W3UWLm71zsdAzW5oZPHwlkmwlLgRaXnT3NnktbfpuXclUbS0nmzVnr6o48spIjWmb8iov/P02Mdi4Z7CRPpWPf6VC4WepHC2ijrrqkRjcMbqGkSo6BZIiu5BKA/e3yZSh3dNxw4s5bXWC5rZjMeakdcWR5rYOwXuhxLieZI31SorYbXaQlgh53Sqcnu2sLjK1cCUnd7jCu4DKkXloDU9t0jBcVmG7ObIi8/jFCBdSOQpsrYYtB1PKOX2szbsOB3pHWxOUt0bsrK68czmZpa47TGszsJBy3Z4QORTRKtnS4BqnlnAOQdXsQszLONJ3LGkLsPOAta1nZcRYRZY83FRdU/ettjiFWmVT3YNnU+d2xrpn3h7oVfcEwpYEUtVd+0I5c61bfELolrpvds14YtFCSSmXUZnFDI0NNvB41W0Ij1epQtxaYvrNo33eu4Y0Xk2V2vud27t9XzRrXEZ1VnNlSnfKsxPMjfTmJk3mNKE2iRv9DaeeZ2JVjA172H/0fFxOwirPCqSau3VPW5azVVkU6zimrDgZQ48HP44nLm23ult3B86NWRrZVZq5lRw6b+xw8tlqXxT7OH7ZtyAY5mI5y8bOmbVAw9wu88w/vbvG2eaz/HSaOp3hZ/lsOT6b8BrUhVfI+8+a3yrbBXFWnVOnz0lzSBL/9AH1AQMGDBgwYMCAAQMGDBgwYMCAAQMGDBgwYMCAAQP+38KvNoBSLG67anZuwfJFwiH1veVt/Muld3oF1yApurZM9KCrGierNyY/vsSu2pZJEq0J0mR3yy7yj9P749KPI/f0EaheLFPpm0ZtGMtJ+whJLzZRx7Yev0zc3j2ryyKMLj42cBscQroDcdW6Ef5CbDVhM3zvVfcvDKlySypHW7f1TYYGZm7HDWo9KATaHU5f2k/lyI9eLpXTkN0WeutiloJU2r30z3alt52VL5hKZ8YH8JZvKDtF5filU0lnpV9e9XXcbpTamZtL745bUmmcpdK4jkoB5pFPUEplt8a5HyoNxqO5j+PlaJSXccyekP+WjhNP6MGtxSzPHWeVTpD4WfU7/W8chGE8o2TGJIdqfMTxluecjfLpAcj292maXr+VjFC5TYNU2I5IqpOm/MO+pIbeKFtPUmEL4Wqym2wygUq/TNNCzCMOjoe8i0pS7XhfpaxOchqrsqw3/BrkMRtSZhGFxxlsmUvdlbEPjmnXvBCpNGZFmuJd36QTSSl0+yOb7M6GtCq+anpRAZuzjd5OtlPJf/1ch4N9442rLglHQZ2rH7vu6pjGR/yAwSLGjyJkeRRuPHbr6bq6fc5ZRCrb6+x4kbLfuyF8K2KbHLdmbnXuIz2FNAyKLAsU3BpqBsnSz4IExLw3VYMyKNcu77dS3a3yIEiQStKppHAXd7cbqRLMNscgbFPppaT9ZJyMk+qqtG06peVkByWALtuHgQcbPdOwCNJ453bcQCtReXBX4/EUdngvNq5bDT1zdswMViN1Y26Px2u4nIapYzolbmjeu3Un8c/+Obsk2pglZLpLqrOQCyWAQgxFgf+aEb/jbEHnwJRvW1+HSeF7CaXSmNScpue/OdUAlWCLBM+QruvBslXxmIfnhlUTDgrMFNN1q/4vQ6QycKuu31tQ221Yn6FPO6gkHNbHPTZuXXPcSL1x+S39riBgw+rSyoXb9YFIgcqNWt9VFeHHJSdhzUAOvRWr1d+eduoChiam4Y7M5AgP0qxrKg2ByqjqdB+OvO7CSig6KvoujqLAfwmVaPYwzXTgVBb1UGVffVqEbpXhRr/2S+CpUr3hBHhkwa3v7HIiFYpeujvaEDBAZm593RjXlX5Yf/djpkPdSvdIE3bdATytMwqOYVwdaIDHqx4qXXolkXqaykNdfQOn5SgP6w7HAwk7t27mVR+anNbUrfCVDiqlSwDuQqVg3OVk3DqOM1MvOTooglJJJjV70VTriW1wbltUxm590IBT6YW7BSk8V0FKs+nYbfbELnGc/emqyjZDuX4nKo1dLRZIalAwzjGcVcdN2J9G4ubVRzXV5mGTU6BUbrkYvB8qN2FymEwOQXTZcQiOlMrNA/OhRj69N5RwCwX1UblQgMo8jCYVIk5lPZS7qSTS0hmtVn5C/OcS7bS7URlRKtdcp67dAzWtaphJElT9s7ueSo57onJ21snrQerKVJr0irwrqQzknj45K40jKTIwSQmzEQ9s3ZVKj9YRqVy4ZKTgYUAz6fyU2Gm8ZCqnPVQS26T+99wnNFqgVJJ+ZaLJoB/4OCVgV27N3FjhAvZYVzmD2q7DWrLl3X7l3i3MY/3Pgquuu1F5pFQWKGBrlexj9kTA1tPW964IinZT6SgviMoJ9+glKoldWFfyomP2IiiV5hGZS5jZg8Zzi8pMqQ+P+0ilSc2eUQBN39BXeqj03GBNBmTm7vb8xNXdzB6qJoypwq2+jXsQzroxITO7xhtpUrmvvtDoFKHgjChidBaoPHY5IzsXg3iL+r71WRJ2U8nMFxOpzOE4tLGH5i3WHVM2rWVSluANXGuldkYU7E6PmqOcSoNKqzjc8UzqWoXQ9EVSK9xOZ4TATSrqjSTZ8UEtUcnldVpT0E2lH2Gce1NbXH4k+CxOmAScNzY89sHFs9Jbu26yFwOnmevu98fc0gvKQbZX1AJHi78JlWJbnScOy4zloOpoDBR6ChFZJ1Cm8WQ/0QIqQ8xVpBw3vGJmFObGeKqzce4c8UNxNjQ4tds9a0yt/XQz2/GPJ5oJcfe3R7z+LysUd2lW981MoLiZFm2W06muF1A5MqmNcco/R1Bqx3x2mOrhusvPndJbJlJ+I4axOSrJhtXTDMM4d2gjEyUgpZqqXrTPdxeka0EDHpPcHE+lL6GnlhhXWFtr09nYzWsB+jFeepm3lNZExuuqFr7Jvqi8WGaZhyp4u9psVjNjZHjekvbd1ssyHlBfpSn83yjT2ByZpk+nllOXJFTMIGnX/CBuBo6rgQdD/bhjVm6zkRmnhXCMtsooLbENpIabFanb2OPFbcu09Ks2oSjZSIVXI7aIHcP3O894+jSE5Xu8PnVr4H2/TKlMgUYa2XbRWmjaVr/hrJlV0UZp8cH0pFe8Ii3iK9ZPBwwYMGDAgAEDBgwYMOB+8H913ANwg831hwAAAABJRU5ErkJggg==" width="250px" height="70px" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <form style="display: flex;">
+          <input class="form-control ms-5" type="search" placeholder="Search product more.." aria-label="Search">
+          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+        </form>
+          <div class="collapse navbar-collapse fw-bold mx-5" id="navbarNav" style="justify-content: end;">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Category</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Sales</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="">Sign In</a>
+                </li>
+                <li>
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <i class="fa-solid fa-heart fa-xl"></i>
+            </li>
+              </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-1"><a href="">Sofas</a></div>
+        <div class="col-1"><a href="">Living</a></div>
+        <div class="col-1"><a href="">Bedroom</a></div>
+        <div class="col-1"><a href="">Dining&Kitchen</a></div>
+        <div class="col-1"><a href="">Storage</a></div>
+        <div class="col-1"><a href="">Study&Office</a></div>
+        <div class="col-1"><a href="">Kids Room</a>  </div>
+        <div class="col-1"><a href=""> Mattresses</a></div>
+        <div class="col-1"> <a href="">Decor</a></div>
+        <div class="col-1"><a href="">Furnishings</a></div>
+        <div class="col-1"><a href=""> Outdoor</a></div>
+      </div>
+</div>
+
+  <div  id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner ">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img class="d-block w-100" src="https://images.woodenstreet.de/image/data/dining-set/6-seater/mcbeth-6-seater-with-bench/honey/updated/looks/updated-new/1.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Dining Sets</h5>
+            <p>To Make Bond Over Meels</p>
+          </div>
+      </div>
+    
+      <div class="carousel-item " data-bs-interval="2000">
+        <img src="https://images.woodenstreet.de/image/data/wooden-sofa/agnes-wooden-sofa-revised/honey/updated/revised/1.jpg" class="d-block" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Wooden Sofas</h5>
+            <p>For the Oodles of Comfort</p>
+          </div>
+      </div>
+
+      <div class="carousel-item " data-bs-interval="2000">
+        <img src="https://images.woodenstreet.de/image/data/study-tables-mdf/bracia-engineered-wood-study-table-exotic-teak-finish/exotic-teak-finish/1.jpg" class="d-block" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Study Table</h5>
+            <p>The Secret to a Productive WFH</p>
+          </div>
+      </div>
+
+ 
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>
+  </div>
+
+  <div class="container">
+    <div class="headingNew">
+    <h3 style="font-size:40px">Top Picks For You</h3>
+    <p>Impressive Collection For Your Dream Home</p>
+    </div>
+    <div class="picks">
+        <div class="row">
+            <div class="col-2"><img src="https://5.imimg.com/data5/IOS/Default/2022/3/GR/DP/JI/90098806/product-jpeg.png" alt=""><p>Sofa set</p></div>
+            <div class="col-2"><img src="https://cdn.pixelbin.io/v2/black-bread-289bfa/TIw66q/wrkr/t.resize(h:500,w:500)/data/Westelm/29062022img/8240136_1.jpg" alt=""><p>Beds</p></div>
+            <div class="col-2"><img src="https://images.woodenstreet.de/image/cache/data%2Fdining-set%2F6-seater%2Fmcbeth-6-seater-with-bench%2Fhoney%2Fupdated%2Flooks%2Fupdated-new%2F1-810x702.jpg" alt=""><p>Dining table Sets</p></div>
+            <div class="col-2"><img src="https://ganpatiarts.com/wp-content/uploads/2022/11/N-1.jpg" alt=""><p>Sofa come Beds</p></div>
+            <div class="col-2"><img src="https://images.woodenstreet.de/image/cache/data%2Ftv-units-mdf%2Fhailey-wall-mounted-tv-unit%2Fexotic%2Fupdated+new%2Fupdated%2Fupda%2F1-810x702.jpg" alt=""><p>TV Units</p></div>
+            <div class="col-2"><img src="https://images.woodenstreet.de/image/cache/data%2Fbook-shelves%2Fcagney-bookshelf-revised%2Fhoney%2Fupdated%2F1-810x702.jpg" alt=""><p>Book Shelves</p></div>
+        </div>
+        <div class="row">
+            <div class="col-2"><img src="https://images.woodenstreet.de/image/cache/data%2Fcoffee-tables-mdf%2Fjevon-coffee-table%2Fexotic-teak-finish%2Fupdated%2F1-810x702.jpg" alt=""><p>Coffee Tables</p></div>
+            <div class="col-2"><img src="https://5.imimg.com/data5/HI/AY/EG/SELLER-63609122/modern-study-tables.jpg" alt=""><p>Study Tables</p></div>
+            <div class="col-2"><img src="https://images.hindustantimes.com/img/2022/12/15/1600x900/spacejoy-YI2YkyaREHk-unsplash_1671112806479_1671112828103_1671112828103.jpg" alt=""><p>Home Decors</p></div>
+            <div class="col-2"><img src="https://www.re-thinkingthefuture.com/wp-content/uploads/2021/04/A3848-How-to-enhance-Soft-Furnishing-Aesthetics-in-your-house.jpg" alt=""><p>Home Furnishing</p></div>
+            <div class="col-2"><img src="https://static.toiimg.com/thumb/msid-77345440,width-1280,resizemode-4/77345440.jpg" alt=""><p>Lamps</p></div>
+            <div class="col-2"><img src="https://cdn.pixabay.com/photo/2015/10/31/12/41/sale-1015710_960_720.jpg" alt=""><p>Sale</p></div>
+        </div>
+    </div>
+ </div> 
+ 
+ 
+ <div class="container">
+    <div class="headingNew">
+        <h3 style="font-size:40px ;">India's Finest Online Furniture Brand</h3>
+        <p style="width: 100%;"  id="para">Buy Furniture Online from our extensive collection of wooden furniture units to give your home an elegant touch at 
+          affordable prices. We offer a wide range of wooden furniture online to suit your home interiors. You can either buy furniture
+           carved out of solid wood material from our offerings or get it customized to match your requirements. Buy furniture online 
+           and find the features, functionality, dimensions of the products, all with great ease. You can also avail the exciting deals 
+           and discount offers on our online furniture store.</p>
+        </div>   
+
+        <div class="cards">
+        <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://5.imimg.com/data5/WG/WN/MY-41057716/designer-bedroom-furniture-set.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Bedroom Furniture</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.6199</span></p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://5.imimg.com/data5/SELLER/Default/2022/6/NZ/RK/NQ/152297042/office-cabin-furniture.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Office Furniture</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.2699</span></p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://thetimberguy.com/cdn/shop/products/Harley-5pc-Wooden-Dining-Table-Set-in-SOLID-SHEESHAM-WOOD-5ft-Table-4-chairs_12649e7e-9b30-4a02-a59c-d6e36c3233cd_800x.jpg?v=1629742126" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Dining Table Sets</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.9889</span></p>
+            </div>
+          </div>
+</div>
+<div class="cards">
+          <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://www.royaloakindia.com/_next/image?url=https%3A%2F%2Fmedia.royaloakindia.com%2Fmedia%2Fcatalog%2Fproduct%2Fr%2Fo%2Froyaloak-nario-boss-table---1-8m-in-melamine-finish-1.jpg&w=828&q=50" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Office Table Sets</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.2349</span></p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://ganpatiarts.com/wp-content/uploads/2020/04/11.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Wooden Sets</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.13849</span></p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 28rem;">
+            <img class="card-img-top" src="https://images.woodenstreet.de/image/data/dressing-tables/taryn-engineered-wood-dressing-table-with-storage-cabinet-and-drawers/flowery-wenge/updated/1.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Dressing Tables</h5>
+              <p class="card-text">from <span style="font-size: 20px;">Rs.2649</span></p>
+            </div>
+          </div>
+        </div>
+ </div>
+ <br>
+
+ <div class="container-fluid">
+  <h3 style="font-weight: 700; font-size: 35px; padding-left: 25px;">Living Room Furniture</h3>
+  <p style="font-weight: 500; font-size: 20; padding-left: 25px;">Let’s Brew N Binge</p>
+
+  <h3 style="position: fixed; left: 0; bottom: 10%; border: 2px solid grey; background-color: antiquewhite;"><i class="fa-solid fa-phone-volume"></i>&nbsp;Buy on phone: <br> <span style="color: red;">&nbsp;&nbsp;&nbsp;&nbsp;1234567890</span></h3>
+
+  <div class="row" >
+    <div class="col-6"><p style="z-index: 2; position: absolute; left: 20%; font-weight: 700; font-size: 60px; color: rgb(255, 255, 255); line-height: 50px;">Recliner <br> <span style="font-size: 30px;">Style That Hit Comfort</span><br><span style="background-color: rgb(229, 73, 73); font-size: 30px;">UPTO 55% off</span></p><img src="https://img.freepik.com/premium-photo/photo-empty-royal-leather-armchair-black-background-empty-wall-3d-rendering_939992-538.jpg" width="90%" height="95%"></div>
+    <div class="col-6" id="gridimg">
+      <div class="row">
+        <div class="col-6">
+      <div><img src="https://www.nilkamalfurniture.com/cdn/shop/products/Roslin3strLS_400x.jpg?v=1678423449" alt="">
+      <h5>3 Seater Sofas</h5></div></div>
+      <div class="col-6">
+      <div><img src="https://5.imimg.com/data5/SELLER/Default/2022/6/KN/AQ/ZU/1076603/classic-modern-tv-unit.jpg" alt="">
+      <h5>TV Units</h5></div></div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+      <div><img src="https://m.media-amazon.com/images/I/61fJuWQuN2L._AC_UF894,1000_QL80_DpWeblab_.jpg" alt="">
+        <h5>Side End Tables</h5>
+      </div></div>
+      <div class="col-6">
+      <div><img src="https://wakefitdev.gumlet.io/img/CoffeeTablesNew/Level/1.jpg?w=732" alt="">
+      <h5>Coffee Tables</h5></div></div>
+    </div>
+    </div>
+  </div>
+ </div>
+
+
+
+ <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block" style="margin-left: 30%;">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div style="margin-right: 30%;">
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Wooden Street
+          </h6>
+          <p>
+            We Deliver in : Ahmedabad, Bangalore, Bhopal, Chandigarh, Chennai, Coimbatore, Faridabad, Ghaziabad, Goa, Gurgaon, Hyderabad, Indore, Jaipur and More Cities
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Our Company
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">About Us</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Career</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Media</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Our stores</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Custom Furniture</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Exporters</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Buy in Bulk</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Delivery Location</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> New Delhi, NH 10012, India</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 99 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 99 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Woodenstreet.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+   
+    
+</body>
+</html>
